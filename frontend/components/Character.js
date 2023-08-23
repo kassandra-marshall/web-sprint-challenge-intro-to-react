@@ -10,9 +10,9 @@ function Character(character) { // ❗ Add the props
   }
 
   return (
-    <div className='character-card'>
+    <div className='character-card' onClick={e => handleClick(e)}>
       {/* Use the same markup with the same attributes as in the mock */}
-      <h3 className='character-name' onClick={e => handleClick(e)}>{character.name}</h3>
+      <h3 className='character-name'>{character.name}</h3>
       {displayHW ? 
         <p>Planet: <span className='character-planet'>{character.homeworld.name}</span>
         </p>
